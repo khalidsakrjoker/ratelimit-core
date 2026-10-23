@@ -1,5 +1,15 @@
 """Shared cross-cutting utilities and infrastructure."""
 
+from ratelimit_core.shared.errors import (
+    AppError,
+    ConfigurationError,
+    ConflictError,
+    ExternalServiceError,
+    ForbiddenError,
+    NotFoundError,
+    UnauthorizedError,
+    ValidationError,
+)
 from ratelimit_core.shared.logging import (
     JsonFormatter,
     StructuredLogger,
@@ -8,8 +18,16 @@ from ratelimit_core.shared.logging import (
 )
 
 __all__ = [
+    "AppError",
+    "ConfigurationError",
+    "ConflictError",
+    "ExternalServiceError",
+    "ForbiddenError",
     "JsonFormatter",
+    "NotFoundError",
     "StructuredLogger",
+    "UnauthorizedError",
+    "ValidationError",
     "configure_logging",
     "get_logger",
 ]
